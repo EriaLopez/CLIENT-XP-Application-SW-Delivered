@@ -4,7 +4,7 @@
 #include "BasePCGUI.h"
 #include "BasePCGUIDlg.h"
 #include <stdio.h>
-#include "../../CommonSrc/datapackets.h"
+#include "../CommonSrc/datapackets.h"
 
 ScannerClass *ScannerClass::openScanner(int scannernum, int TCPport, int TCPdataport, char *scannerID)
 {

@@ -3,7 +3,7 @@
 
 #include <afxmt.h>
 //#include "timer.h"
-#include "../../CommonSrc/datapackets.h"
+#include "../CommonSrc/datapackets.h"
 
 #define NSCANNERS 1  // number of scanners
 #define TWO_PI 6.28318530717959

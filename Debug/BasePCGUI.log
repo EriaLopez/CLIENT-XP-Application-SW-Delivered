@@ -1,49 +1,107 @@
-﻿Build started 8/2/2016 12:07:32 PM.
+﻿Build started 8/3/2016 7:44:34 PM.
      1>Project "C:\Users\Carmina\Documents\Master\Thesis\SRI500_Software\CLIENT-XP Application SW Delivered\BasePCGUI.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /D _AFXDLL /Gm /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo".\Debug/" /Fd".\Debug/vc140.pdb" /Gd /TP /analyze- /errorReport:prompt src\BasePCGUI.cpp src\BasePCGUIDlg.cpp src\Calibration.cpp src\GlobalsClass.cpp src\OpenGLControl.cpp src\ReceiveDataClass.cpp src\ScannerClass.cpp src\ScannerFunctions.cpp src\TCPClass.cpp src\ThreadClass.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /AI"C:\Users\Carmina\Documents\Master\Thesis\SRI500_Software\CLIENT-XP Application SW Delivered\CommonSrc" /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /D _AFXDLL /Gm /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo".\Debug/" /Fd".\Debug/vc140.pdb" /Gd /TP /analyze- /errorReport:prompt src\BasePCGUI.cpp src\BasePCGUIDlg.cpp src\Calibration.cpp src\GlobalsClass.cpp src\OpenGLControl.cpp src\ReceiveDataClass.cpp src\ScannerClass.cpp src\ScannerFunctions.cpp src\TCPClass.cpp src\ThreadClass.cpp
          ThreadClass.cpp
      1>C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(38): warning C4996: 'MBCS_Support_Deprecated_In_MFC': MBCS support in MFC is deprecated and may be removed in a future version of MFC.
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(33): note: see declaration of 'MBCS_Support_Deprecated_In_MFC'
-     1>c:\users\carmina\documents\master\thesis\sri500_software\client-xp application sw delivered\src\GlobalsClass.h(6): fatal error C1083: Cannot open include file: '../../CommonSrc/datapackets.h': No such file or directory
          TCPClass.cpp
      1>C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(38): warning C4996: 'MBCS_Support_Deprecated_In_MFC': MBCS support in MFC is deprecated and may be removed in a future version of MFC.
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(33): note: see declaration of 'MBCS_Support_Deprecated_In_MFC'
-     1>c:\users\carmina\documents\master\thesis\sri500_software\client-xp application sw delivered\src\GlobalsClass.h(6): fatal error C1083: Cannot open include file: '../../CommonSrc/datapackets.h': No such file or directory
+     1>src\TCPClass.cpp(52): warning C4996: 'gethostbyname': Use getaddrinfo() or GetAddrInfoW() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+         C:\Program Files (x86)\Windows Kits\8.1\Include\um\winsock2.h(2238): note: see declaration of 'gethostbyname'
+     1>src\TCPClass.cpp(56): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+         C:\Program Files (x86)\Windows Kits\8.1\Include\um\winsock2.h(1850): note: see declaration of 'inet_addr'
+     1>src\TCPClass.cpp(61): warning C4996: 'gethostbyaddr': Use getnameinfo() or GetNameInfoW() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+         C:\Program Files (x86)\Windows Kits\8.1\Include\um\winsock2.h(2216): note: see declaration of 'gethostbyaddr'
+     1>src\TCPClass.cpp(82): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'char **'
+     1>src\TCPClass.cpp(100): warning C4996: 'inet_ntoa': Use inet_ntop() or InetNtop() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+         C:\Program Files (x86)\Windows Kits\8.1\Include\um\winsock2.h(1868): note: see declaration of 'inet_ntoa'
          ScannerFunctions.cpp
      1>C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(38): warning C4996: 'MBCS_Support_Deprecated_In_MFC': MBCS support in MFC is deprecated and may be removed in a future version of MFC.
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(33): note: see declaration of 'MBCS_Support_Deprecated_In_MFC'
-     1>c:\users\carmina\documents\master\thesis\sri500_software\client-xp application sw delivered\src\ScannerClass.h(8): fatal error C1083: Cannot open include file: '../../CommonSrc/datapackets.h': No such file or directory
          ScannerClass.cpp
      1>C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(38): warning C4996: 'MBCS_Support_Deprecated_In_MFC': MBCS support in MFC is deprecated and may be removed in a future version of MFC.
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(33): note: see declaration of 'MBCS_Support_Deprecated_In_MFC'
-     1>c:\users\carmina\documents\master\thesis\sri500_software\client-xp application sw delivered\src\ScannerClass.h(8): fatal error C1083: Cannot open include file: '../../CommonSrc/datapackets.h': No such file or directory
          ReceiveDataClass.cpp
      1>C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(38): warning C4996: 'MBCS_Support_Deprecated_In_MFC': MBCS support in MFC is deprecated and may be removed in a future version of MFC.
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(33): note: see declaration of 'MBCS_Support_Deprecated_In_MFC'
-     1>c:\users\carmina\documents\master\thesis\sri500_software\client-xp application sw delivered\src\GlobalsClass.h(6): fatal error C1083: Cannot open include file: '../../CommonSrc/datapackets.h': No such file or directory
          OpenGLControl.cpp
      1>C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(38): warning C4996: 'MBCS_Support_Deprecated_In_MFC': MBCS support in MFC is deprecated and may be removed in a future version of MFC.
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(33): note: see declaration of 'MBCS_Support_Deprecated_In_MFC'
-     1>c:\users\carmina\documents\master\thesis\sri500_software\client-xp application sw delivered\src\ScannerClass.h(8): fatal error C1083: Cannot open include file: '../../CommonSrc/datapackets.h': No such file or directory
+     1>src\OpenGLControl.cpp(312): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+     1>src\OpenGLControl.cpp(315): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
          GlobalsClass.cpp
      1>C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(38): warning C4996: 'MBCS_Support_Deprecated_In_MFC': MBCS support in MFC is deprecated and may be removed in a future version of MFC.
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(33): note: see declaration of 'MBCS_Support_Deprecated_In_MFC'
-     1>c:\users\carmina\documents\master\thesis\sri500_software\client-xp application sw delivered\src\GlobalsClass.h(6): fatal error C1083: Cannot open include file: '../../CommonSrc/datapackets.h': No such file or directory
          Calibration.cpp
      1>C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(38): warning C4996: 'MBCS_Support_Deprecated_In_MFC': MBCS support in MFC is deprecated and may be removed in a future version of MFC.
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(33): note: see declaration of 'MBCS_Support_Deprecated_In_MFC'
-     1>c:\users\carmina\documents\master\thesis\sri500_software\client-xp application sw delivered\src\ScannerClass.h(8): fatal error C1083: Cannot open include file: '../../CommonSrc/datapackets.h': No such file or directory
+     1>src\Calibration.cpp(23): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+     1>src\Calibration.cpp(24): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+     1>src\Calibration.cpp(72): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+     1>src\Calibration.cpp(73): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+     1>src\Calibration.cpp(74): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+     1>src\Calibration.cpp(149): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+     1>src\Calibration.cpp(150): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+     1>src\Calibration.cpp(206): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>src\Calibration.cpp(207): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>src\Calibration.cpp(208): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>src\Calibration.cpp(209): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>src\Calibration.cpp(183): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+     1>src\Calibration.cpp(184): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+     1>src\Calibration.cpp(242): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+     1>src\Calibration.cpp(243): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+     1>src\Calibration.cpp(245): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+     1>src\Calibration.cpp(246): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
          BasePCGUIDlg.cpp
      1>C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(38): warning C4996: 'MBCS_Support_Deprecated_In_MFC': MBCS support in MFC is deprecated and may be removed in a future version of MFC.
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(33): note: see declaration of 'MBCS_Support_Deprecated_In_MFC'
-     1>c:\users\carmina\documents\master\thesis\sri500_software\client-xp application sw delivered\src\GlobalsClass.h(6): fatal error C1083: Cannot open include file: '../../CommonSrc/datapackets.h': No such file or directory
+     1>src\BasePCGUIDlg.cpp(368): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+     1>src\BasePCGUIDlg.cpp(459): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
+     1>src\BasePCGUIDlg.cpp(521): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+     1>src\BasePCGUIDlg.cpp(527): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+     1>src\BasePCGUIDlg.cpp(533): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+     1>src\BasePCGUIDlg.cpp(539): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+     1>src\BasePCGUIDlg.cpp(545): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>src\BasePCGUIDlg.cpp(551): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>src\BasePCGUIDlg.cpp(557): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>src\BasePCGUIDlg.cpp(563): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>src\BasePCGUIDlg.cpp(569): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>src\BasePCGUIDlg.cpp(575): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>src\BasePCGUIDlg.cpp(581): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>src\BasePCGUIDlg.cpp(587): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
          BasePCGUI.cpp
      1>C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(38): warning C4996: 'MBCS_Support_Deprecated_In_MFC': MBCS support in MFC is deprecated and may be removed in a future version of MFC.
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(33): note: see declaration of 'MBCS_Support_Deprecated_In_MFC'
          Generating Code...
-     1>Done Building Project "C:\Users\Carmina\Documents\Master\Thesis\SRI500_Software\CLIENT-XP Application SW Delivered\BasePCGUI.vcxproj" (Build target(s)) -- FAILED.
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _DEBUG /D _VC80_UPGRADE=0x0600 /D _AFXDLL /l"0x0409" /nologo /fo".\Debug\BasePCGUI.res" BasePCGUI.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug/BasePCGUI.exe" /INCREMENTAL /NOLOGO opengl32.lib glu32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\Include\Manifest\dpiaware.manifest" /Debug /PDB:".\Debug/BasePCGUI.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /ENTRY:"WinMainCRTStartup" /DYNAMICBASE:NO /IMPLIB:".\Debug\BasePCGUI.lib" /MACHINE:X86 /SAFESEH .\Debug\BasePCGUI.res
+         .\Debug/BasePCGUI.obj
+         .\Debug/BasePCGUIDlg.obj
+         .\Debug/Calibration.obj
+         .\Debug/GlobalsClass.obj
+         .\Debug/OpenGLControl.obj
+         .\Debug/ReceiveDataClass.obj
+         .\Debug/ScannerClass.obj
+         .\Debug/ScannerFunctions.obj
+         .\Debug/TCPClass.obj
+         .\Debug/ThreadClass.obj
+         BasePCGUI.vcxproj -> C:\Users\Carmina\Documents\Master\Thesis\SRI500_Software\CLIENT-XP Application SW Delivered\.\Debug\BasePCGUI.exe
+     1>Done Building Project "C:\Users\Carmina\Documents\Master\Thesis\SRI500_Software\CLIENT-XP Application SW Delivered\BasePCGUI.vcxproj" (Build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:12.14
+Time Elapsed 00:00:15.90

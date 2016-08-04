@@ -76,6 +76,7 @@
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalUsingDirectories>C:\Users\Carmina\Documents\Master\Thesis\SRI500_Software\CLIENT-XP Application SW Delivered\CommonSrc;%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -156,7 +157,6 @@
     <ClCompile Include="src\ThreadClass.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\CommonSrc\datapackets.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="src\BasePCGUI.h" />
     <ClInclude Include="src\BasePCGUIDlg.h" />

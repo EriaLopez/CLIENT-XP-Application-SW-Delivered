@@ -3,7 +3,7 @@
 #include <windows.h>
 #include <WinSock2.h>
 #include "ThreadClass.h"
-#include "..\..\CommonSrc\datapackets.h"
+#include "..\CommonSrc\datapackets.h"
 
 
  class TCPClass //: public ThreadClass
