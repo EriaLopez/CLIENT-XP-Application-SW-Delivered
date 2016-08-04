@@ -1,0 +1,13 @@
+int haltScan(ScannerClass *scanner);
+int abortScan(ScannerClass *scanner);
+int elevationSpeed(ScannerClass *scanner, int elevationSpeed);
+int azimuthSpeed(ScannerClass *scanner, int azimuthSpeed);
+int azimuthParameters(ScannerClass *scanner, int azimuthSpeed, int azimuthStart, int azimuthEnd);
+int elevationParameters(ScannerClass *scanner, int elevationSpeed, int elevationStart, int samplesPerLine, int elevSampleSpacing);
+int azimuthPosition(ScannerClass *scanner, int azPos);
+int startScan(ScannerClass *scanner);
+int getStatus(ScannerClass *scanner);
+int getLog(ScannerClass *scanner);
+int scannerSleep(ScannerClass *scanner);
+int calibrateScan(ScannerClass *scanner);
+int pushTCPCommand(ScannerClass *scanner);

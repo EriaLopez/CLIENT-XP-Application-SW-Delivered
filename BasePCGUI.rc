@@ -1,0 +1,253 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\BasePCGUI.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\BasePCGUI.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG  0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About BasePCGUI"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "BasePCGUI Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2009",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_BASEPCGUI_DIALOG DIALOGEX 0, 0, 889, 462
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "BasePCGUI"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDITAzSpeed,141,105,44,14,ES_AUTOHSCROLL,WS_EX_RIGHT
+    PUSHBUTTON      "Set Azimuth Position",IDC_BUTTONazimuthPosition,59,184,76,14
+    EDITTEXT        IDC_EDITAzPos,8,183,44,14,ES_AUTOHSCROLL,WS_EX_RIGHT
+    PUSHBUTTON      "Immediate Elevation Speed",IDC_BUTTONelevationSpeed,141,55,107,14
+    EDITTEXT        IDC_EDITElSpeed,142,37,44,14,ES_AUTOHSCROLL,WS_EX_RIGHT
+    EDITTEXT        IDC_EDITAzStart,17,93,44,14,ES_AUTOHSCROLL,WS_EX_RIGHT
+    EDITTEXT        IDC_EDITElStart,15,17,44,14,ES_AUTOHSCROLL,WS_EX_RIGHT
+    EDITTEXT        IDC_EDITpointsPerLine,141,17,44,14,ES_AUTOHSCROLL,WS_EX_RIGHT
+    LTEXT           "Azimuth Start",IDC_STATICAzStart,65,96,42,8
+    LTEXT           "Elevation Start",IDC_STATICElStart,67,20,47,8
+    LTEXT           "Samples per Line",IDC_STATICpointsPerLine,189,20,55,8
+    EDITTEXT        IDC_EDITelevationResolution,15,36,44,14,ES_AUTOHSCROLL,WS_EX_RIGHT
+    LTEXT           "Sample Spacing",IDC_STATICelevationResolution,66,39,52,8
+    EDITTEXT        IDC_EDITazimuthEnd,141,88,44,14,ES_AUTOHSCROLL,WS_EX_RIGHT
+    LTEXT           "Azimuth End",IDC_STATICazimuthEnd,189,90,55,11
+    PUSHBUTTON      "Queue Single Scan",IDC_BUTTONsingleScan,95,208,83,14
+    PUSHBUTTON      "End After Current Scan",IDC_BUTTONhaltScan,95,226,83,14
+    EDITTEXT        IDC_EDITstatusDisplay,95,278,170,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "Get Scanner State",IDC_BUTTONstatusDisplay,19,278,69,14
+    PUSHBUTTON      "Abort Scanning",IDC_BUTTONabortscan,95,245,83,14
+    CONTROL         "",IDC_OPENGL,"Static",SS_BLACKFRAME | NOT WS_VISIBLE | WS_BORDER,279,7,603,448
+    PUSHBUTTON      "Immdiate Azimuth Speed",IDC_BUTTONazimuthSpeed,141,122,106,14
+    LTEXT           "Elevation Speed",IDC_STATICAzStart3,190,41,53,8
+    LTEXT           "Azimuth Speed",IDC_STATICazimuthEnd2,189,108,55,11
+    GROUPBOX        "Scan Line Setup",IDC_STATICModeGroup2,8,7,253,67
+    GROUPBOX        "Scan Azimuth Setup",IDC_STATICModeGroup3,8,81,253,60
+    PUSHBUTTON      "Send Scan Line Parameters",IDC_BUTTONElevationParameters,16,55,107,14
+    PUSHBUTTON      "Send Scan Azimuth Parameters",IDC_BUTTONAzimuthParameters,17,117,107,14
+    EDITTEXT        IDC_EDITCommandAck,108,155,153,13,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Command Acknowledgement:",IDC_STATICAzStart5,8,157,98,9
+    PUSHBUTTON      "Print Scanner Log",IDC_BUTTONstatusDisplay2,17,302,123,14
+    PUSHBUTTON      "Sleep",IDC_BUTTONstatusDisplay3,175,302,87,14
+    PUSHBUTTON      "Calibrate and Convert Last Captured Scan to ASCII",IDC_BUTTONstatusDisplay4,45,326,188,14
+    PUSHBUTTON      "Calibrate, Transform, and Display Last Captured Scan",IDC_BUTTONstatusDisplay5,45,364,188,14
+    EDITTEXT        IDC_Dmax,187,385,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Dmin,121,385,40,14
+    EDITTEXT        IDC_Xmin,121,401,40,14,ES_AUTOHSCROLL
+    CONTROL         "Use Distance Filter",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_TABSTOP,16,387,75,10
+    CONTROL         "Use X Fillter",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,403,53,10
+    GROUPBOX        "Display",IDC_STATIC,8,353,261,102
+    LTEXT           "Min:",IDC_STATIC,103,388,14,8
+    LTEXT           "Min:",IDC_STATIC,103,405,14,10
+    LTEXT           "Min:",IDC_STATIC,103,421,14,8
+    LTEXT           "Min:",IDC_STATIC,103,437,14,8
+    CONTROL         "Use Y Filter",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,419,52,10
+    CONTROL         "Use Z Filter",IDC_CHECK6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,435,52,10
+    LTEXT           "Max:",IDC_STATIC,170,387,16,8
+    EDITTEXT        IDC_Xmax,188,401,40,14,ES_AUTOHSCROLL
+    LTEXT           "Max:",IDC_STATIC,169,404,16,8
+    LTEXT           "Max:",IDC_STATIC,169,420,16,8
+    LTEXT           "Max:",IDC_STATIC,169,437,16,8
+    EDITTEXT        IDC_Ymin,121,418,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Zmin,121,434,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Ymax,188,418,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Zmax,188,434,40,14,ES_AUTOHSCROLL
+    LTEXT           "Inches",IDC_STATIC,235,388,22,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", "BasePCGUI MFC Application"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "BasePCGUI"
+            VALUE "LegalCopyright", "Copyright (C) 2009"
+            VALUE "OriginalFilename", "BasePCGUI.EXE"
+            VALUE "ProductName", "BasePCGUI Application"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_BASEPCGUI_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 8
+        RIGHTMARGIN, 882
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 455
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About BasePCGUI..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\BasePCGUI.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
