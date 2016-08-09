@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "ReceiveDataClass.h"
-#include "../../CommonSrc/datapackets.h"
+#include "../CommonSrc/datapackets.h"
 
 #include <math.h>
 #include <stdio.h>

@@ -5,7 +5,7 @@
 #include "BasePCGUIDlg.h"
 
 #include <stdio.h>
-#include "../../CommonSrc/datapackets.h"
+#include "../CommonSrc/datapackets.h"
 #include "math.h"
 
 #define SPEEDCAL (2.9979246e8/.0254)  //speed of light in inches per second
