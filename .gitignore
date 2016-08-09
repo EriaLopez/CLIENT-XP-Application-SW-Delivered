@@ -51,5 +51,7 @@ Temporary Items
 *.opensdf
 *.cd
 *.sdf
-*.filters
 *.suo
+*.filters
+*.sdf
+.vs/BasePCGUI/v14/.suo
