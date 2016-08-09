@@ -45,3 +45,11 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# eclopezv
+# Visual Studio files OK to ignore
+*.opensdf
+*.cd
+*.sdf
+*.filters
+*.suo
