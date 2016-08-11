@@ -296,3 +296,61 @@ void ScannerClass::CalibrateAndConvertToAscii()
 	fclose(s_DataFile); 
 	s_DataFile = NULL;
 }
+
+//eclopezv
+//update g_myGlobals from file (no scanning)
+void ScannerClass::updateMyGlobalsFromFile()
+{
+    SRIPacket packet;
+    calibratedLine calLine;
+    char fname[40];
+    int nread;
+
+    sprintf(fname, "SRI500BinaryFile0");
+    s_DataFile = fopen(fname, "rb");
+
+    int point = 0;
+    double mindist = 1e10;
+    double maxdist = 0;
+    while (1)
+    {
+        fread((void *)&(packet.lineHdr), sizeof(SRIPacketHdr), 1, s_DataFile);
+        nread = fread((void *)&(packet.lineData), sizeof(scanDataPerSample), packet.lineHdr.samplesPerLine, s_DataFile);
+        if (nread <= 0) break;
+
+        calibrateLine(&packet, &calLine); //radius in is fixed point in tenths of an inch, out is double in inches
+        double Sphi, R;
+        for (int i = 0; i < packet.lineHdr.samplesPerLine; i++)
+        {
+            if (useDist && ((calLine.R[i] < Dmin) || (calLine.R[i] > Dmax)))
+                continue;
+
+            //signal str has an inverted scale
+            //			if((packet.lineData[i].signalStrength >= 32000) &&  (packet.lineData[i].signalStrength < 55000))
+            {
+                Sphi = sin(calLine.phi[i]);
+                g_myGlobals.R[point] = R = calLine.R[i];
+                g_myGlobals.X[point] = R*cos(calLine.theta[i])*Sphi;
+                g_myGlobals.Y[point] = R*sin(calLine.theta[i])*Sphi;
+                g_myGlobals.Z[point] = R*cos(calLine.phi[i]);
+
+                if (useX && ((g_myGlobals.X[point] < Xmin) || (g_myGlobals.X[point] > Xmax)))
+                    continue;
+                if (useY && ((g_myGlobals.Y[point] < Ymin) || (g_myGlobals.Y[point] > Ymax)))
+                    continue;
+                if (useZ && ((g_myGlobals.Z[point] < Zmin) || (g_myGlobals.Z[point] > Zmax)))
+                    continue;
+
+                if (g_myGlobals.R[point] > maxdist)
+                    maxdist = g_myGlobals.R[point];
+                if (g_myGlobals.R[point] < mindist)
+                    mindist = g_myGlobals.R[point];
+                point++;
+            }
+        }
+    }
+    g_myGlobals.Npoints = point;
+    g_myGlobals.minDist = mindist;
+    g_myGlobals.maxDist = maxdist;
+    fclose(s_DataFile);
+}

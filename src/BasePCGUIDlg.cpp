@@ -21,6 +21,8 @@ static char THIS_FILE[] = __FILE__;
 #include "ScannerFunctions.h"
 
 GlobalsClass g_theGlobals;
+//eclopezv
+GlobalsClass g_myGlobals;
 
 // multiclass declarations end
 
@@ -511,8 +513,11 @@ void CBasePCGUIDlg::OnBnClickedButtonDisplay()
 	OnEnChangeZmin();
 	OnEnChangeZmax();
 	ScannerClass *scanner = thisScannerPtr;
-	scanner->ScanToXYZ();
-	m_oglWindow.oglDrawScene();
+    //eclopezv
+    //scanner->ScanToXYZ();
+    //m_oglWindow.oglDrawScene();
+    scanner->updateMyGlobalsFromFile();
+	m_oglWindow.myOglDrawScene();
 }
 
 void CBasePCGUIDlg::OnBnClickedUseDist()

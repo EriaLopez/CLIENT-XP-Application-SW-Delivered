@@ -342,3 +342,60 @@ void COpenGLControl::oglDrawScene(void)
 		glEnd();
 #endif
 }
+
+void COpenGLControl::myOglDrawScene(void)
+{
+    //return;
+    // Wireframe Mode
+    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    //glEnable(GL_CULL_FACE);  // hide faces that are behind
+
+    glPointSize(1.0f); // set point size to _x5 pixels
+
+#if 1 // 1 = plot actual points. 0 = plot a cube for testing OpenGL
+                       //printf("Npoints %d\n", g_theGlobals.Npoints);
+
+    double minmax, fac, dist;
+    glBegin(GL_POINTS);
+    if (g_myGlobals.Npoints > 1)
+    {
+        minmax = 1.0 / (g_myGlobals.maxDist - g_myGlobals.minDist);
+        fac = 5.0 / g_myGlobals.maxDist;
+        for (unsigned i = 0; i < g_myGlobals.Npoints; i++)
+        {
+            dist = g_myGlobals.R[i]; //3D dist from scanner
+            COLOUR c = GetColour(dist, g_myGlobals.minDist, g_myGlobals.maxDist);
+
+            glColor3f(c.r, c.g, c.b); // set color //glColor3b(r,g,b);
+                                      //			glVertex3f(1.0, 1.0, 1.0);
+
+            glVertex3f(fac*g_myGlobals.X[i], fac*g_myGlobals.Y[i], fac*g_myGlobals.Z[i]); // set vertex
+        }
+    }
+    glEnd();
+
+    return;
+#else
+                       // for testing
+
+                       //glBegin(GL_QUADS);
+                       //glBegin(GL_POLYGON);
+    glBegin(GL_POINTS);
+    // Top Side
+    glColor3f(0.0f, 0.0f, 1.0f);
+    glVertex3f(1.0f, 1.0f, 1.0f);
+    glVertex3f(1.0f, 1.0f, -1.0f);
+    glVertex3f(-1.0f, 1.0f, -1.0f);
+    glVertex3f(-1.0f, 1.0f, 1.0f);
+
+    // Bottom Side
+    //glColor3f(1.0f,0.0f,0.0f);
+    glColor3f(1.0f, 1.0f, 1.0f);
+    glVertex3f(-1.0f, -1.0f, -1.0f);
+    glVertex3f(1.0f, -1.0f, -1.0f);
+    glVertex3f(1.0f, -1.0f, 1.0f);
+    glVertex3f(-1.0f, -1.0f, 1.0f);
+
+    glEnd();
+#endif
+}

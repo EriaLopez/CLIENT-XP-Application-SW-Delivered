@@ -37,5 +37,6 @@ extern unsigned short calcCheckSum(unsigned char *data, int length);
  };
  
  extern GlobalsClass g_theGlobals;
+ extern GlobalsClass g_myGlobals;
 
 #endif

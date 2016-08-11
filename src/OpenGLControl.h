@@ -41,6 +41,8 @@ class COpenGLControl : public CWnd
 		void oglCreate(CRect rect, CWnd *parent);
 		void oglInitialize(void);
 		void oglDrawScene(void);
+        //eclopezv
+        void myOglDrawScene(void);
 
 		// Added message classes:
 		afx_msg void OnPaint();

@@ -55,3 +55,6 @@ Temporary Items
 *.filters
 *.sdf
 .vs/BasePCGUI/v14/.suo
+.vs/BasePCGUI/v14/.suo
+.vs/BasePCGUI/v14/.suo
+Debug/**

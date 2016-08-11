@@ -40,6 +40,7 @@ class ScannerClass : public ThreadClass
 	void logBinaryScanLine(SRIPacket *packet, int fnum);
 	void CalibrateAndConvertToAscii();
 	void ScanToXYZ();
+    void updateMyGlobalsFromFile();
 
 	HANDLE s_DataLogEvent;
 	HANDLE ackReceivedEvent;
