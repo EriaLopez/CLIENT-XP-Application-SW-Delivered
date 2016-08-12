@@ -27,6 +27,7 @@ GlobalsClass g_myGlobals;
 // multiclass declarations end
 
 #define thisScannerPtr ((ScannerClass *)(g_theGlobals.ScannerPtr[atoi(m_currentScannerNumber)]))
+#define myScannerPtr ((ScannerClass *)(g_myGlobals.ScannerPtr[atoi(m_currentScannerNumber)]))
 
 
 /////////////////////////////////////////////////////////////////////////////
@@ -500,6 +501,8 @@ void CBasePCGUIDlg::OnBnClickedConvert()
 
 void CBasePCGUIDlg::OnBnClickedButtonDisplay()
 {
+    printf("eclopezv OnBnClickedButtonDisplay() \n");
+    /*
 	OnBnClickedUseDist();
 	OnBnClickedUseX();
 	OnBnClickedUseY();
@@ -511,7 +514,7 @@ void CBasePCGUIDlg::OnBnClickedButtonDisplay()
 	OnEnChangeYmin();
 	OnEnChangeYmax();
 	OnEnChangeZmin();
-	OnEnChangeZmax();
+	OnEnChangeZmax();*/
 	ScannerClass *scanner = thisScannerPtr;
     //eclopezv
     //scanner->ScanToXYZ();

@@ -12,6 +12,20 @@
 #define ZERO_OFFSET (63.5) //tenths of an inch
 #define COUNTS_PER_NS (65536.0/1132.3)
 
+//eclopezv
+#define d_Dmin     54
+#define d_Dmax     500
+#define d_useDist  (TRUE)
+#define d_useX     (TRUE)
+#define d_useY     (TRUE)
+#define d_useZ     (TRUE)
+#define d_Xmin     500
+#define d_Xmax     500
+#define d_Ymin     500
+#define d_Ymax     500
+#define d_Zmin     100
+#define d_Zmax     100
+
 int writecount;
 
 void ScannerClass::logBinaryScanLine(SRIPacket *packet, int fnum)
@@ -305,6 +319,8 @@ void ScannerClass::updateMyGlobalsFromFile()
     calibratedLine calLine;
     char fname[40];
     int nread;
+    
+    printf("eclopezv updateMyGlobalsFromFile() \n");
 
     sprintf(fname, "SRI500BinaryFile0");
     s_DataFile = fopen(fname, "rb");
@@ -322,7 +338,7 @@ void ScannerClass::updateMyGlobalsFromFile()
         double Sphi, R;
         for (int i = 0; i < packet.lineHdr.samplesPerLine; i++)
         {
-            if (useDist && ((calLine.R[i] < Dmin) || (calLine.R[i] > Dmax)))
+            if (d_useDist && ((calLine.R[i] < d_Dmin) || (calLine.R[i] > d_Dmax)))
                 continue;
 
             //signal str has an inverted scale
@@ -334,11 +350,11 @@ void ScannerClass::updateMyGlobalsFromFile()
                 g_myGlobals.Y[point] = R*sin(calLine.theta[i])*Sphi;
                 g_myGlobals.Z[point] = R*cos(calLine.phi[i]);
 
-                if (useX && ((g_myGlobals.X[point] < Xmin) || (g_myGlobals.X[point] > Xmax)))
+                if (d_useX && ((g_myGlobals.X[point] < d_Xmin) || (g_myGlobals.X[point] > d_Xmax)))
                     continue;
-                if (useY && ((g_myGlobals.Y[point] < Ymin) || (g_myGlobals.Y[point] > Ymax)))
+                if (d_useY && ((g_myGlobals.Y[point] < d_Ymin) || (g_myGlobals.Y[point] > d_Ymax)))
                     continue;
-                if (useZ && ((g_myGlobals.Z[point] < Zmin) || (g_myGlobals.Z[point] > Zmax)))
+                if (d_useZ && ((g_myGlobals.Z[point] < d_Zmin) || (g_myGlobals.Z[point] > d_Zmax)))
                     continue;
 
                 if (g_myGlobals.R[point] > maxdist)

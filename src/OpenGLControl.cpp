@@ -6,6 +6,7 @@
 #include "ScannerClass.h"
 #include "GlobalsClass.h"
 extern GlobalsClass g_theGlobals;
+extern GlobalsClass g_myGlobals;
 
 ScannerClass *SptrOpenGL = NULL; 
 void ConvertXYZ(SRIPacket *SRIdataPacket);
@@ -345,6 +346,9 @@ void COpenGLControl::oglDrawScene(void)
 
 void COpenGLControl::myOglDrawScene(void)
 {
+
+    printf("eclopezv myOglDrawScene() \n");
+
     //return;
     // Wireframe Mode
     glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
