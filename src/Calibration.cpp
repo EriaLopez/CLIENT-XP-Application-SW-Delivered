@@ -13,18 +13,18 @@
 #define COUNTS_PER_NS (65536.0/1132.3)
 
 //eclopezv
-#define d_Dmin     54
-#define d_Dmax     500
+#define d_Dmin     (54)
+#define d_Dmax     (500)
 #define d_useDist  (TRUE)
 #define d_useX     (TRUE)
 #define d_useY     (TRUE)
 #define d_useZ     (TRUE)
-#define d_Xmin     500
-#define d_Xmax     500
-#define d_Ymin     500
-#define d_Ymax     500
-#define d_Zmin     100
-#define d_Zmax     100
+#define d_Xmin     (-500)
+#define d_Xmax     (500)
+#define d_Ymin     (-500)
+#define d_Ymax     (500)
+#define d_Zmin     (-100)
+#define d_Zmax     (100)
 
 int writecount;
 
@@ -317,27 +317,37 @@ void ScannerClass::updateMyGlobalsFromFile()
 {
     SRIPacket packet;
     calibratedLine calLine;
-    char fname[40];
+    //char fname[40];
     int nread;
     
     printf("eclopezv updateMyGlobalsFromFile() \n");
 
-    sprintf(fname, "SRI500BinaryFile0");
-    s_DataFile = fopen(fname, "rb");
-
+    //sprintf(fname, "SRI500BinaryFile0");
+    s_DataFile = fopen("SRI500BinaryFile0", "rb");
+    printf("1 \n");
     int point = 0;
     double mindist = 1e10;
     double maxdist = 0;
+
+    if (s_DataFile == 0)
+    {
+        printf("s_DataFile NULL \n");
+    }
+
     while (1)
     {
+        //printf("2 \n");
         fread((void *)&(packet.lineHdr), sizeof(SRIPacketHdr), 1, s_DataFile);
+        //printf("3 \n");
         nread = fread((void *)&(packet.lineData), sizeof(scanDataPerSample), packet.lineHdr.samplesPerLine, s_DataFile);
+        //printf("4 \n");
         if (nread <= 0) break;
 
         calibrateLine(&packet, &calLine); //radius in is fixed point in tenths of an inch, out is double in inches
         double Sphi, R;
         for (int i = 0; i < packet.lineHdr.samplesPerLine; i++)
         {
+            //printf("i = %d \n", i);
             if (d_useDist && ((calLine.R[i] < d_Dmin) || (calLine.R[i] > d_Dmax)))
                 continue;
 
@@ -369,4 +379,5 @@ void ScannerClass::updateMyGlobalsFromFile()
     g_myGlobals.minDist = mindist;
     g_myGlobals.maxDist = maxdist;
     fclose(s_DataFile);
+    printf("after fclose \n");
 }

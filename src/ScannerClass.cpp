@@ -40,6 +40,8 @@ ScannerClass::ScannerClass(int scannernum, int TCPport, int TCPdataport, char *s
 
 void ScannerClass::RunMain()
 {
+    printf("eclopezv myOglDrawScene() \n");
+
 	s_TCPcommandPacket.packetNumber = 0; // initialize the ID
 	TCPClass TCPcmd(atoi(TCP_PORT));
 

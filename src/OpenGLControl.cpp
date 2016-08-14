@@ -140,7 +140,8 @@ void COpenGLControl::OnTimer(UINT nIDEvent)
 			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 			// Draw OpenGL scene
-			oglDrawScene();
+			//oglDrawScene();
+            myOglDrawScene();
 			
 			SwapBuffers(hdc);
 
@@ -348,6 +349,16 @@ void COpenGLControl::myOglDrawScene(void)
 {
 
     printf("eclopezv myOglDrawScene() \n");
+
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+    glBegin(GL_TRIANGLES);
+
+    glVertex3f(-1.0f, -0.5f, -4.0f);    // lower left vertex
+    glVertex3f(1.0f, -0.5f, -4.0f);    // lower right vertex
+    glVertex3f(0.0f, 0.5f, -4.0f);    // upper vertex
+
+    glEnd();
 
     //return;
     // Wireframe Mode
