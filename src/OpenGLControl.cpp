@@ -8,6 +8,7 @@
 extern GlobalsClass g_theGlobals;
 extern GlobalsClass g_myGlobals;
 
+
 ScannerClass *SptrOpenGL = NULL; 
 void ConvertXYZ(SRIPacket *SRIdataPacket);
 int buffToUseLocal_old = -1;

@@ -13,13 +13,11 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// English (U.S.) resources
+// English (United States) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
-#ifdef _WIN32
 LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 #pragma code_page(1252)
-#endif //_WIN32
 
 #ifdef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////
@@ -73,7 +71,7 @@ IDR_MAINFRAME           ICON                    "res\\BasePCGUI.ico"
 // Dialog
 //
 
-IDD_ABOUTBOX DIALOG  0, 0, 235, 55
+IDD_ABOUTBOX DIALOG 0, 0, 235, 55
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "About BasePCGUI"
 FONT 8, "MS Sans Serif"
@@ -123,7 +121,7 @@ BEGIN
     PUSHBUTTON      "Print Scanner Log",IDC_BUTTONstatusDisplay2,17,302,123,14
     PUSHBUTTON      "Sleep",IDC_BUTTONstatusDisplay3,175,302,87,14
     PUSHBUTTON      "Calibrate and Convert Last Captured Scan to ASCII",IDC_BUTTONstatusDisplay4,45,326,188,14
-    PUSHBUTTON      "Calibrate, Transform, and Display Last Captured Scan",IDC_BUTTONstatusDisplay5,45,364,188,14
+    PUSHBUTTON      "Display Last Scan",IDC_BUTTONstatusDisplay5,17,366,69,14
     EDITTEXT        IDC_Dmax,187,385,40,14,ES_AUTOHSCROLL
     EDITTEXT        IDC_Dmin,121,385,40,14
     EDITTEXT        IDC_Xmin,121,401,40,14,ES_AUTOHSCROLL
@@ -146,6 +144,8 @@ BEGIN
     EDITTEXT        IDC_Ymax,188,418,40,14,ES_AUTOHSCROLL
     EDITTEXT        IDC_Zmax,188,434,40,14,ES_AUTOHSCROLL
     LTEXT           "Inches",IDC_STATIC,235,388,22,8
+    PUSHBUTTON      "Display from file:",IDC_BUTTON1,89,366,63,14
+    CONTROL         "",IDC_MFCEDITBROWSE1,"MfcEditBrowse",WS_BORDER | WS_TABSTOP | 0x1080,157,366,104,14,WS_EX_ACCEPTFILES
 END
 
 
@@ -193,7 +193,7 @@ END
 //
 
 #ifdef APSTUDIO_INVOKED
-GUIDELINES DESIGNINFO 
+GUIDELINES DESIGNINFO
 BEGIN
     IDD_ABOUTBOX, DIALOG
     BEGIN
@@ -216,15 +216,41 @@ END
 
 /////////////////////////////////////////////////////////////////////////////
 //
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_BASEPCGUI_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_BASEPCGUI_DIALOG DLGINIT
+BEGIN
+    IDC_MFCEDITBROWSE1, 0x37c, 42, 0
+0x4d3c, 0x4346, 0x6445, 0x7469, 0x7242, 0x776f, 0x6573, 0x4d5f, 0x646f, 
+0x3e65, 0x3c31, 0x4d2f, 0x4346, 0x6445, 0x7469, 0x7242, 0x776f, 0x6573, 
+0x4d5f, 0x646f, 0x3e65, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
 // String Table
 //
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDS_ABOUTBOX            "&About BasePCGUI..."
 END
 
-#endif    // English (U.S.) resources
+#endif    // English (United States) resources
 /////////////////////////////////////////////////////////////////////////////
 
 

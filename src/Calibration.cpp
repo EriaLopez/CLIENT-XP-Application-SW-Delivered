@@ -26,6 +26,8 @@
 #define d_Zmin     (-100)
 #define d_Zmax     (100)
 
+extern CString      strFileName;
+
 int writecount;
 
 void ScannerClass::logBinaryScanLine(SRIPacket *packet, int fnum)
@@ -321,9 +323,10 @@ void ScannerClass::updateMyGlobalsFromFile()
     int nread;
     
     printf("eclopezv updateMyGlobalsFromFile() \n");
+    printf("strFileName %s \n", strFileName);
 
     //sprintf(fname, "SRI500BinaryFile0");
-    s_DataFile = fopen("SRI500BinaryFile0", "rb");
+    s_DataFile = fopen(strFileName, "rb");
     printf("1 \n");
     int point = 0;
     double mindist = 1e10;

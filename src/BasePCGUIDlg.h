@@ -116,6 +116,10 @@ public:
 	CButton b_useX;
 	CButton b_useY;
 	CButton b_useZ;
+    afx_msg void OnBnClickedButton1();
+    afx_msg void OnEnChangeMfceditbrowse1();
+    // //eclopezv file name to open and display
+    CWnd fileName;
 };
 
 //{{AFX_INSERT_LOCATION}}

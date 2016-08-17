@@ -23,6 +23,7 @@ static char THIS_FILE[] = __FILE__;
 GlobalsClass g_theGlobals;
 //eclopezv
 GlobalsClass g_myGlobals;
+CString      strFileName;
 
 // multiclass declarations end
 
@@ -108,36 +109,37 @@ CBasePCGUIDlg::CBasePCGUIDlg(CWnd* pParent /*=NULL*/)
 
 void CBasePCGUIDlg::DoDataExchange(CDataExchange* pDX)
 {
-	CDialog::DoDataExchange(pDX);
-	//{{AFX_DATA_MAP(CBasePCGUIDlg)
-	// NOTE: the ClassWizard will add DDX and DDV calls here
-	//}}AFX_DATA_MAP
+    CDialog::DoDataExchange(pDX);
+    //{{AFX_DATA_MAP(CBasePCGUIDlg)
+    // NOTE: the ClassWizard will add DDX and DDV calls here
+    //}}AFX_DATA_MAP
 
-	DDX_Text(pDX, IDC_EDITAzSpeed, m_azimuthSpeed);
-	DDV_MaxChars(pDX, m_azimuthSpeed, 7);
-	DDX_Text(pDX, IDC_EDITAzPos, m_azimuthPosition);
-	DDX_Text(pDX, IDC_EDITElSpeed, m_elevationSpeed);
-	DDX_Text(pDX, IDC_EDITAzStart, m_azimuthStart);
-	DDX_Text(pDX, IDC_EDITElStart, m_elevationStart);
-	DDX_Text(pDX, IDC_EDITpointsPerLine, m_pointsPerLine);
-	DDX_Text(pDX, IDC_EDITelevationResolution, m_elevationResolution);
-	DDX_Text(pDX, IDC_EDITazimuthEnd, m_azimuthEnd);
-	DDV_MaxChars(pDX, m_azimuthEnd, 8);
-	DDX_Text(pDX, IDC_EDITstatusDisplay, m_statusDisplay);
-	DDV_MaxChars(pDX, m_azimuthStart, 8);
-	DDX_Text(pDX, IDC_EDITCommandAck, m_ackStatusDisplay);
-	DDX_Text(pDX, IDC_Dmin, m_Dmin);
-	DDX_Text(pDX, IDC_Dmax, m_Dmax);
-	DDX_Text(pDX, IDC_Xmin, m_Xmin);
-	DDX_Text(pDX, IDC_Xmax, m_Xmax);
-	DDX_Text(pDX, IDC_Ymin, m_Ymin);
-	DDX_Text(pDX, IDC_Ymax, m_Ymax);
-	DDX_Text(pDX, IDC_Zmin, m_Zmin);
-	DDX_Text(pDX, IDC_Zmax, m_Zmax);
-	DDX_Control(pDX, IDC_CHECK1, b_useDist);
-	DDX_Control(pDX, IDC_CHECK2, b_useX);
-	DDX_Control(pDX, IDC_CHECK5, b_useY);
-	DDX_Control(pDX, IDC_CHECK6, b_useZ);
+    DDX_Text(pDX, IDC_EDITAzSpeed, m_azimuthSpeed);
+    DDV_MaxChars(pDX, m_azimuthSpeed, 7);
+    DDX_Text(pDX, IDC_EDITAzPos, m_azimuthPosition);
+    DDX_Text(pDX, IDC_EDITElSpeed, m_elevationSpeed);
+    DDX_Text(pDX, IDC_EDITAzStart, m_azimuthStart);
+    DDX_Text(pDX, IDC_EDITElStart, m_elevationStart);
+    DDX_Text(pDX, IDC_EDITpointsPerLine, m_pointsPerLine);
+    DDX_Text(pDX, IDC_EDITelevationResolution, m_elevationResolution);
+    DDX_Text(pDX, IDC_EDITazimuthEnd, m_azimuthEnd);
+    DDV_MaxChars(pDX, m_azimuthEnd, 8);
+    DDX_Text(pDX, IDC_EDITstatusDisplay, m_statusDisplay);
+    DDV_MaxChars(pDX, m_azimuthStart, 8);
+    DDX_Text(pDX, IDC_EDITCommandAck, m_ackStatusDisplay);
+    DDX_Text(pDX, IDC_Dmin, m_Dmin);
+    DDX_Text(pDX, IDC_Dmax, m_Dmax);
+    DDX_Text(pDX, IDC_Xmin, m_Xmin);
+    DDX_Text(pDX, IDC_Xmax, m_Xmax);
+    DDX_Text(pDX, IDC_Ymin, m_Ymin);
+    DDX_Text(pDX, IDC_Ymax, m_Ymax);
+    DDX_Text(pDX, IDC_Zmin, m_Zmin);
+    DDX_Text(pDX, IDC_Zmax, m_Zmax);
+    DDX_Control(pDX, IDC_CHECK1, b_useDist);
+    DDX_Control(pDX, IDC_CHECK2, b_useX);
+    DDX_Control(pDX, IDC_CHECK5, b_useY);
+    DDX_Control(pDX, IDC_CHECK6, b_useZ);
+    DDX_Control(pDX, IDC_MFCEDITBROWSE1, fileName);
 }
 
 BEGIN_MESSAGE_MAP(CBasePCGUIDlg, CDialog)
@@ -173,6 +175,8 @@ BEGIN_MESSAGE_MAP(CBasePCGUIDlg, CDialog)
 	ON_BN_CLICKED(IDC_CHECK2, &CBasePCGUIDlg::OnBnClickedUseX)
 	ON_BN_CLICKED(IDC_CHECK5, &CBasePCGUIDlg::OnBnClickedUseY)
 	ON_BN_CLICKED(IDC_CHECK6, &CBasePCGUIDlg::OnBnClickedUseZ)
+    ON_BN_CLICKED(IDC_BUTTON1, &CBasePCGUIDlg::OnBnClickedButton1)
+    ON_EN_CHANGE(IDC_MFCEDITBROWSE1, &CBasePCGUIDlg::OnEnChangeMfceditbrowse1)
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
@@ -501,8 +505,6 @@ void CBasePCGUIDlg::OnBnClickedConvert()
 
 void CBasePCGUIDlg::OnBnClickedButtonDisplay()
 {
-    printf("eclopezv OnBnClickedButtonDisplay() \n");
-    /*
 	OnBnClickedUseDist();
 	OnBnClickedUseX();
 	OnBnClickedUseY();
@@ -514,13 +516,11 @@ void CBasePCGUIDlg::OnBnClickedButtonDisplay()
 	OnEnChangeYmin();
 	OnEnChangeYmax();
 	OnEnChangeZmin();
-	OnEnChangeZmax();*/
+	OnEnChangeZmax();
 	ScannerClass *scanner = thisScannerPtr;
-    //eclopezv
-    //scanner->ScanToXYZ();
-    //m_oglWindow.oglDrawScene();
-    scanner->updateMyGlobalsFromFile();
-	m_oglWindow.myOglDrawScene();
+    scanner->ScanToXYZ();
+    m_oglWindow.oglDrawScene();
+
 }
 
 void CBasePCGUIDlg::OnBnClickedUseDist()
@@ -593,4 +593,26 @@ void CBasePCGUIDlg::OnEnChangeZmax()
 {
 		UpdateData();
 thisScannerPtr->Zmax = atof(m_Zmax);
+}
+
+// eclopezv
+// Display from file button
+void CBasePCGUIDlg::OnBnClickedButton1()
+{
+    printf("eclopezv OnBnClickedButtonDisplay() \n");
+    ScannerClass *scanner = thisScannerPtr;
+    
+    scanner->updateMyGlobalsFromFile();
+    m_oglWindow.myOglDrawScene();
+}
+
+
+void CBasePCGUIDlg::OnEnChangeMfceditbrowse1()
+{
+    // TODO:  If this is a RICHEDIT control, the control will not
+    // send this notification unless you override the CDialog::OnInitDialog()
+    // function and call CRichEditCtrl().SetEventMask()
+    // with the ENM_CHANGE flag ORed into the mask.
+
+    fileName.GetWindowTextA(strFileName);
 }
