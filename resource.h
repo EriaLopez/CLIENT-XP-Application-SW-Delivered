@@ -84,6 +84,7 @@
 #define IDC_EDIT8                       1065
 #define IDC_Zmax                        1065
 #define IDC_CHECK3                      1066
+#define IDC_MFCEDITBROWSE1              1067
 
 // Next default values for new objects
 // 

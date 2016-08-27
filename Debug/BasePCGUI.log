@@ -1,5 +1,5 @@
-﻿Build started 8/3/2016 7:44:34 PM.
-     1>Project "C:\Users\Carmina\Documents\Master\Thesis\SRI500_Software\CLIENT-XP Application SW Delivered\BasePCGUI.vcxproj" on node 2 (Build target(s)).
+﻿Build started 8/26/2016 6:57:42 PM.
+     1>Project "C:\Users\Carmina\Documents\Master\Thesis\SRI500_Software\CLIENT-XP Application SW Delivered\BasePCGUI.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /AI"C:\Users\Carmina\Documents\Master\Thesis\SRI500_Software\CLIENT-XP Application SW Delivered\CommonSrc" /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /D _AFXDLL /Gm /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo".\Debug/" /Fd".\Debug/vc140.pdb" /Gd /TP /analyze- /errorReport:prompt src\BasePCGUI.cpp src\BasePCGUIDlg.cpp src\Calibration.cpp src\GlobalsClass.cpp src\OpenGLControl.cpp src\ReceiveDataClass.cpp src\ScannerClass.cpp src\ScannerFunctions.cpp src\TCPClass.cpp src\ThreadClass.cpp
          ThreadClass.cpp
@@ -29,58 +29,67 @@
          OpenGLControl.cpp
      1>C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(38): warning C4996: 'MBCS_Support_Deprecated_In_MFC': MBCS support in MFC is deprecated and may be removed in a future version of MFC.
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(33): note: see declaration of 'MBCS_Support_Deprecated_In_MFC'
-     1>src\OpenGLControl.cpp(312): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
      1>src\OpenGLControl.cpp(315): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+     1>src\OpenGLControl.cpp(318): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+     1>src\OpenGLControl.cpp(385): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+     1>src\OpenGLControl.cpp(388): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
          GlobalsClass.cpp
      1>C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(38): warning C4996: 'MBCS_Support_Deprecated_In_MFC': MBCS support in MFC is deprecated and may be removed in a future version of MFC.
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(33): note: see declaration of 'MBCS_Support_Deprecated_In_MFC'
          Calibration.cpp
      1>C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(38): warning C4996: 'MBCS_Support_Deprecated_In_MFC': MBCS support in MFC is deprecated and may be removed in a future version of MFC.
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(33): note: see declaration of 'MBCS_Support_Deprecated_In_MFC'
-     1>src\Calibration.cpp(23): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>src\Calibration.cpp(39): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
          C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
-     1>src\Calibration.cpp(24): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>src\Calibration.cpp(40): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
          C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
-     1>src\Calibration.cpp(72): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-     1>src\Calibration.cpp(73): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-     1>src\Calibration.cpp(74): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-     1>src\Calibration.cpp(149): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-     1>src\Calibration.cpp(150): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-     1>src\Calibration.cpp(206): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-     1>src\Calibration.cpp(207): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-     1>src\Calibration.cpp(208): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-     1>src\Calibration.cpp(209): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-     1>src\Calibration.cpp(183): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>src\Calibration.cpp(88): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+     1>src\Calibration.cpp(89): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+     1>src\Calibration.cpp(90): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+     1>src\Calibration.cpp(165): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+     1>src\Calibration.cpp(166): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+     1>src\Calibration.cpp(222): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>src\Calibration.cpp(223): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>src\Calibration.cpp(224): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>src\Calibration.cpp(225): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>src\Calibration.cpp(199): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
          C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
-     1>src\Calibration.cpp(184): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>src\Calibration.cpp(200): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
          C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
-     1>src\Calibration.cpp(242): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>src\Calibration.cpp(258): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
          C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
-     1>src\Calibration.cpp(243): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>src\Calibration.cpp(259): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
          C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
-     1>src\Calibration.cpp(245): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>src\Calibration.cpp(261): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
          C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
-     1>src\Calibration.cpp(246): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>src\Calibration.cpp(262): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+         C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+     1>src\Calibration.cpp(361): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>src\Calibration.cpp(362): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>src\Calibration.cpp(363): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>src\Calibration.cpp(364): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>src\Calibration.cpp(326): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'CString'
+     1>src\Calibration.cpp(329): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
          C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
          BasePCGUIDlg.cpp
      1>C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(38): warning C4996: 'MBCS_Support_Deprecated_In_MFC': MBCS support in MFC is deprecated and may be removed in a future version of MFC.
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(33): note: see declaration of 'MBCS_Support_Deprecated_In_MFC'
-     1>src\BasePCGUIDlg.cpp(368): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>src\BasePCGUIDlg.cpp(375): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
          C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
-     1>src\BasePCGUIDlg.cpp(459): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>src\BasePCGUIDlg.cpp(466): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
          C:\Program Files (x86)\Windows Kits\10\Include\10.0.10150.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
-     1>src\BasePCGUIDlg.cpp(521): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
-     1>src\BasePCGUIDlg.cpp(527): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
-     1>src\BasePCGUIDlg.cpp(533): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
-     1>src\BasePCGUIDlg.cpp(539): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
-     1>src\BasePCGUIDlg.cpp(545): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-     1>src\BasePCGUIDlg.cpp(551): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-     1>src\BasePCGUIDlg.cpp(557): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-     1>src\BasePCGUIDlg.cpp(563): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-     1>src\BasePCGUIDlg.cpp(569): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-     1>src\BasePCGUIDlg.cpp(575): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-     1>src\BasePCGUIDlg.cpp(581): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-     1>src\BasePCGUIDlg.cpp(587): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>src\BasePCGUIDlg.cpp(529): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+     1>src\BasePCGUIDlg.cpp(535): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+     1>src\BasePCGUIDlg.cpp(541): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+     1>src\BasePCGUIDlg.cpp(547): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+     1>src\BasePCGUIDlg.cpp(553): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>src\BasePCGUIDlg.cpp(559): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>src\BasePCGUIDlg.cpp(565): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>src\BasePCGUIDlg.cpp(571): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>src\BasePCGUIDlg.cpp(577): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>src\BasePCGUIDlg.cpp(583): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>src\BasePCGUIDlg.cpp(589): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>src\BasePCGUIDlg.cpp(595): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
          BasePCGUI.cpp
      1>C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(38): warning C4996: 'MBCS_Support_Deprecated_In_MFC': MBCS support in MFC is deprecated and may be removed in a future version of MFC.
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afx.h(33): note: see declaration of 'MBCS_Support_Deprecated_In_MFC'
@@ -100,8 +109,8 @@
          .\Debug/TCPClass.obj
          .\Debug/ThreadClass.obj
          BasePCGUI.vcxproj -> C:\Users\Carmina\Documents\Master\Thesis\SRI500_Software\CLIENT-XP Application SW Delivered\.\Debug\BasePCGUI.exe
-     1>Done Building Project "C:\Users\Carmina\Documents\Master\Thesis\SRI500_Software\CLIENT-XP Application SW Delivered\BasePCGUI.vcxproj" (Build target(s)).
+     1>Done Building Project "C:\Users\Carmina\Documents\Master\Thesis\SRI500_Software\CLIENT-XP Application SW Delivered\BasePCGUI.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:15.90
+Time Elapsed 00:00:17.77
